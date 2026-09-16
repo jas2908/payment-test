@@ -52,8 +52,8 @@
     align-items: center; 
     justify-content: center; 
     padding: 30px; 
-    background: var(--dark); 
-    color: white;
+    background: #374151;
+    color:  white;
     font-size: 22px;
     font-weight: 600;
     letter-spacing: 0.8px;
@@ -145,6 +145,38 @@
     color: #64748B;
     font-size: 14px;
     flex-shrink: 0;
+}
+
+.package-payment-button {
+    display: block;
+    width: fit-content;
+    margin: 22px auto 0;
+    padding: 10px 22px;
+    background: var(--dark);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.15s ease,
+        box-shadow 0.25s ease;
+}
+
+.package-payment-button:hover {
+    background-color: #facc15;
+    color: #111827;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.package-payment-button:active {
+    transform: translateY(0) scale(0.96);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 }
 
 

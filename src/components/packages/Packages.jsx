@@ -17,19 +17,27 @@ const Packages = () => {
                     {/* PACKAGE 1 */}
                     <div className="package-card">
 
-                        {/* <div className="package-top"> */}
-                            <span className="package-header">STARTPAKKE</span>
+                        <span className="package-header">STARTPAKKE</span>
 
-                            {/* <h2>Startpakke</h2> */}
+                        <div className="package-price">
+                            5 200 <span>kr</span>
+                        </div>
 
-                            <div className="package-price">
-                                5 200 <span>kr</span>
-                            </div>
+                        
 
-                            <div className="package-saving">
-                                Spar 200 kr
-                            </div>
-                        {/* </div> */}
+                        <div className="package-saving">
+                            Spar 200 kr
+                        </div>
+
+                        {/* PAYMENT BUTTON */}
+                            <a
+                                href="https://buy.stripe.com/test_dRm6oB3r7bwL76R3VqaZi00"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="package-payment-button"
+                            >
+                                Kjøp Startpakke
+                            </a>
 
                         <div className="package-content">
 
@@ -55,6 +63,8 @@ const Packages = () => {
                                 </li>
                             </ul>
 
+                            
+
                         </div>
                     </div>
 
@@ -62,35 +72,37 @@ const Packages = () => {
                     {/* PACKAGE 2 */}
                     <div className="package-card">
 
-                        {/* <div className="featured-badge">
-                            KOMPLETT PAKKE
-                        </div> */}
+                        <span className="package-header">KLASSE B</span>
 
-                        {/* <div className="package-top"> */}
-                            <span className="package-header">KLASSE B</span>
+                        <div className="package-price">
+                            27 500 <span>kr</span>
+                        </div>
 
-                            {/* <h2>Klasse B </h2> */}
+                        <div className="package-saving">
+                            Spar 2100 kr
+                        </div>
 
-                            <div className="package-price">
-                                30 000 <span>kr</span>
-                            </div>
-
-                            <div className="package-saving">
-                                Spar 2300 kr
-                            </div>
-                        {/* </div> */}
+                        {/* PAYMENT BUTTON */}
+                            <a
+                                href="https://buy.stripe.com/test_eVq9ANbXDcAPgHrcrWaZi01"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="package-payment-button"
+                            >
+                                Kjøp Klasse B
+                            </a>
 
                         <div className="package-content">
 
                             <p className="package-description">
                                 Alt obligatorisk opplæring kombinert med
-                                10 kjøretimer på dagtid.
+                                7 kjøretimer på dagtid.
                             </p>
 
                             <ul>
                                 <li>
                                     <i className="fa fa-check"></i>
-                                    10 kjøretimer à 45 min.
+                                    7 kjøretimer à 45 min.
                                 </li>
 
                                 <li>
@@ -128,6 +140,7 @@ const Packages = () => {
                                     Gjelder kl. 07.00–16.00
                                 </li>
                             </ul>
+                            
 
                         </div>
                     </div>
@@ -139,3 +152,4 @@ const Packages = () => {
 }
 
 export default Packages
+

@@ -23,7 +23,7 @@ const PriceList = () => {
                 ["Kjøretime (45 min)", "900,-"],
                 ["Kjøretime helg (45 min)", "1000,-"],
                 ["Kartleggingstime (90 min)", "1800,-"],
-                ["Dobbeltime før kl. 16", "1800,-"],
+                ["Dobbeltime etter kl. 16", "2000,-"],
                 ["Dobbeltime helg (90 min)", "2000,-"],
                 ["Trinnvurderingstime 2 (45 min)", "900,-"],
                 ["Trinnvurderingstime 3 (60 min)", "1300,-"]
@@ -33,15 +33,14 @@ const PriceList = () => {
             title: "Førerprøve",
             items: [
                 ["Leie av bil til førerprøve Oslo (60 min før)", "4450,-"],                
-                ["Leie av bil til førerprøve Drøbak (60 min før)", "5600,-"],
-                ["Praktisk prøve gebyr", "1540,-"]
+                ["Leie av bil til førerprøve Drøbak (60 min før)", "5600,-"],                
             ]
         },
         {
             title: "Offentlige gebyrer",
             items: [
                 ["Teoriprøve", "480,-"],
-                ["Førerprøve", "1550,-"],
+                ["Førerprøve", "1540,-"],
                 ["Førerprøvekort", "160,-"],
                 ["Digitalt bilde", "100,-"],
                 ["NAF-gebyr", "1550,-"]

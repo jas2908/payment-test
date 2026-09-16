@@ -54,8 +54,8 @@ import Error from "../404_page/Error";
 import Appointment from "../appointment/Appointment";
 import Contact from "../contact/Contact";
 import Footer from "../common/footer/Footer";
-import AboutDetails from '../about/AboutDetails'
-import SchoolRules from '../schoolRules/SchoolRules'
+import AboutDetails from '../about/AboutDetails';
+import SchoolRules from '../schoolRules/SchoolRules';
 import Faq from "../faq/Faq";
 import ElevInfo from "../elevinfo/ElevInfo";
 import PrivacyPolicy from "../privacy/PrivacyPolicy";

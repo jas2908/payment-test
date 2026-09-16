@@ -6,31 +6,153 @@
     height: 100vh;
     width: 100%;
     position: relative;
+    overflow: hidden;
 }
+
+
+/* =========================
+   HERO DARK OVERLAY
+   ========================= */
+
 .hero .overlay {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    height: 100vh;
     z-index: 1;
 }
+
+
+/* =========================
+   PROMOTION INSIDE HERO
+   ========================= */
+
+.hero-promo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    transform: translateX(100%);
+
+    transition:
+        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.5s ease;
+
+    z-index: 2;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+
+/* =========================
+   PROMOTION VIDEOS
+   ========================= */
+
+.hero-promo .promo-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+    /* =========================
+    DESKTOP / MOBILE VIDEOS
+    ========================= */
+
+    .desktop-video {
+        display: block;
+    }
+
+    .mobile-video {
+        display: none;
+    }
+
+/* =========================
+   SLIDE 2
+   ========================= */
+
+.hero.slide-2 .hero-promo {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hero.slide-2 .video-2 {
+    opacity: 1;
+}
+
+
+/* =========================
+   SLIDE 3
+   ========================= */
+
+.hero.slide-3 .hero-promo {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hero.slide-3 .video-3 {
+    opacity: 1;
+}
+
+
+/* =========================
+   HERO TEXT
+   ========================= */
+
 .hero .text {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     padding-top: 200px;
     max-width: 600px;
     margin: auto;
     text-align: center;
+
+    position: relative;
+    z-index: 3;
+
+    transition:
+        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.4s ease;
 }
+
 .hero .text h1 {
     color: #fff;
     font-size: 70px;
     z-index: 99;
 }
+
+
+/* =========================
+   MOVE TEXT ON SLIDES 2 & 3
+   ========================= */
+
+.hero.slide-2 .text,
+.hero.slide-3 .text {
+    opacity: 1;
+    transform: translateX(-380px);
+}
+
+
+/* =========================
+   HERO BUTTONS
+   ========================= */
+
 .hero .text .button button {
     position: relative;
     padding: 20px 60px;
@@ -42,51 +164,232 @@
     cursor: pointer;
     transition: 0.2s;
 }
+
 .hero .text .button .one {
     margin-right: 5px;
     color: #fff;
     background-color: var(--primary);
 }
+
 .hero .text .button .one:hover {
     background-color: #f3be00e1;
 }
+
 .hero .text .button .two {
     color: #fff;
 }
+
 .hero .text .button .two:hover {
     background-color: #f3be00e1;
 }
-@media screen and (max-width:640px) {
-    .hero {
-        height: 60vh;
+
+
+/* =========================
+   DESKTOP ANIMATION ONLY
+   ========================= */
+
+@media screen and (min-width: 993px) {
+
+    .hero.slide-2 .hero-promo,
+    .hero.slide-3 .hero-promo {
+        opacity: 1;
+        transform: translateX(0);
     }
-    .hero .overlay {
-        height: 60vh;
-    }
-    .hero .text h1 {
-        font-size: 40px;
+
+    .hero.slide-2 .text,
+    .hero.slide-3 .text {
+        opacity: 1;
+        transform: translateX(-500px);
     }
 }
-@media screen and (min-width:641px) and (max-width:992px) {
+
+/* =========================
+   MOBILE
+   ========================= */
+
+
+
+@media screen and (max-width: 640px) {
+
+    .hero {
+        height: 60vh;
+    }
+
+    .hero .overlay {
+        height: 100%;
+    }
+
+
+    /* =========================
+       MOBILE VIDEOS
+       ========================= */
+
+    .hero-promo {
+        display: block;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Hide desktop videos */
+    .desktop-video {
+        display: none;
+    }
+
+    /* Show mobile videos */
+    .mobile-video {
+        display: block;
+    }
+
+    .hero-promo .promo-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+
+    /* =========================
+       HERO TEXT
+       ========================= */
+
+    .hero .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        padding-top: 140px;
+        max-width: 100%;
+        width: 100%;
+        margin: auto;
+
+        text-align: center;
+
+        position: relative;
+        z-index: 3;
+
+        opacity: 1;
+        transform: translateX(0);
+
+        transition:
+            transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .hero .text h1 {
+        font-size: 40px;
+        color: #fff;
+        z-index: 99;
+    }
+
+
+    /* =========================
+       MOVE TEXT ON SLIDES 2 & 3
+       ========================= */
+
+    .hero.slide-2 .text,
+    .hero.slide-3 .text {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+
+    /* =========================
+       SLIDE 2
+       ========================= */
+
+    .hero.slide-2 .hero-promo {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .hero.slide-2 .video-2 {
+        opacity: 1;
+    }
+
+
+    /* =========================
+       SLIDE 3
+       ========================= */
+
+    .hero.slide-3 .hero-promo {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .hero.slide-3 .video-3 {
+        opacity: 1;
+    }
+
+
+    /* =========================
+       BUTTONS
+       ========================= */
+
+    .hero .text .button {
+        position: relative;
+        z-index: 100;
+    }
+
+    .hero .text .button button {
+        position: relative;
+        z-index: 100;
+        padding: 15px 35px;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media screen and (min-width: 641px) and (max-width: 992px) {
+
     .hero {
         height: 50vh;
     }
+
     .hero .overlay {
-        height: 50vh;
+        height: 100%;
     }
+
     .hero .text {
         padding-top: 120px;
+        opacity: 1;
+        transform: none;
     }
+
     .hero .text h1 {
         font-size: 50px;
     }
+
     .hero .text .button button {
         margin-top: 20px;
     }
+
+    /* No desktop animation on tablet */
+    .hero-promo {
+        display: none;
+    }
 }
+
+
+/* =========================
+   HERO CONTAINER
+   ========================= */
+
 .hero .container {
     margin: auto;
 }
+
+
+/* =========================
+   INFO ROW
+   ========================= */
+
 .row {
     max-width: 100%;
     display: flex;
@@ -95,6 +398,7 @@
     margin: 0 20px;
     z-index: 111;
 }
+
 .row .box {
     display: flex;
     padding: 40px 25px;
@@ -102,6 +406,7 @@
     width: 100%;
     margin-top: 5px;
 }
+
 .row .box i {
     color: #fff;
     background-color: var(--primary);
@@ -112,41 +417,119 @@
     justify-content: center;
     align-items: center;
 }
+
 .row .box .info {
     margin-left: 30px;
     text-align: left;
 }
+
 .row .box .info h2 {
     color: var(--dark);
     font-weight: 500;
 }
+
 .row .box .info p {
     margin-top: 10px;
     color: #757575;
     line-height: 1.5;
     font-size: 17px;
 }
-@media screen and (max-width:992px) {
+
+
+/* =========================
+   INFO ROW MOBILE/TABLET
+   ========================= */
+
+@media screen and (max-width: 992px) {
+
     .row {
         flex-direction: column;
         top: 100px;
         margin-bottom: 200px;
     }
+
     .row .box {
         max-width: 100%;
     }
 }
-@media screen and (min-width:993px) and (max-width:1200px) {
+
+
+/* =========================
+   INFO ROW MEDIUM DESKTOP
+   ========================= */
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+
     .container {
         margin: auto;
     }
+
     .row {
         margin: 0 100px;
         flex-direction: column;
         top: 100px;
         margin-bottom: 200px;
     }
+
     .row .box {
         max-width: 100%;
+    }
+}
+
+
+/* =========================
+   PROMOTION BELOW HERO
+   Hidden on desktop
+   ========================= */
+
+.promo-banner {
+    display: none;
+    width: 100%;
+    padding: 30px 0;
+    background: var(--bg);
+}
+
+.promo-container {
+    width: 60%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.promo-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.promo-banner a {
+    display: block;
+}
+
+
+/* =========================
+   MOBILE PROMOTION
+   Uses original square image
+   ========================= */
+
+@media screen and (max-width: 768px) {
+
+    .promo-banner {
+        display: none;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .promo-container {
+        width: 92%;
+        max-width: none;
+        margin: 0 auto;
+    }
+
+    .promo-banner img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
     }
 }
