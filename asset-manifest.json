@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/payment-test/static/css/main.f11b5c1d.css",
+    "main.js": "/payment-test/static/js/main.2c0406af.js",
+    "static/media/carousel-1.jpg": "/payment-test/static/media/carousel-1.589ef6ea197a0206767b.jpg",
+    "index.html": "/payment-test/index.html",
+    "main.f11b5c1d.css.map": "/payment-test/static/css/main.f11b5c1d.css.map",
+    "main.2c0406af.js.map": "/payment-test/static/js/main.2c0406af.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f11b5c1d.css",
+    "static/js/main.2c0406af.js"
+  ]
+}
