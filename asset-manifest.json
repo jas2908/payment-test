@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/payment-test/static/css/main.1db440bc.css",
-    "main.js": "/payment-test/static/js/main.feda318b.js",
+    "main.js": "/payment-test/static/js/main.f341c79a.js",
     "static/media/carousel-1.jpg": "/payment-test/static/media/carousel-1.589ef6ea197a0206767b.jpg",
     "index.html": "/payment-test/index.html",
     "main.1db440bc.css.map": "/payment-test/static/css/main.1db440bc.css.map",
-    "main.feda318b.js.map": "/payment-test/static/js/main.feda318b.js.map"
+    "main.f341c79a.js.map": "/payment-test/static/js/main.f341c79a.js.map"
   },
   "entrypoints": [
     "static/css/main.1db440bc.css",
-    "static/js/main.feda318b.js"
+    "static/js/main.f341c79a.js"
   ]
 }
